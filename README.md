@@ -1,73 +1,72 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# URL Shortener App
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+This URL Shortener app is a simple MVP (Minimum Viable Product) built using NestJS, TypeScript, and Redis as a data store. Please note that this code was generated with the assistance of ChatGPT and may require further refinement and testing for production use.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Table of Contents
 
-## Description
+- [Introduction](#introduction)
+- [Background](#background)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Introduction
 
-## Installation
+This URL Shortener app allows you to shorten long URLs into more manageable and shareable links. It includes basic functionality for shortening URLs and redirecting users to the original URLs.
 
-```bash
-$ npm install
-```
+Please be aware that while ChatGPT assisted in generating this code, it may not be production-ready and could require additional development and testing.
 
-## Running the app
+## Background
 
-```bash
-# development
-$ npm run start
+This project was initiated based on the following prompt:
 
-# watch mode
-$ npm run start:dev
+"You are a senior TypeScript engineer. You write declarative immutable code. You cover your code with deterministic tests. Using NestJS build a URL shortener. Incorporate any popular open-source tooling you need. It just needs to be an MVP with basic functionality."
 
-# production mode
-$ npm run start:prod
-```
+The code and architecture for this URL shortener were generated with the assistance of ChatGPT based on the provided prompt.
 
-## Test
+## Prerequisites
 
-```bash
-# unit tests
-$ npm run test
+Before you begin, ensure you have met the following requirements:
 
-# e2e tests
-$ npm run test:e2e
+- Node.js and npm installed on your development machine.
+- Redis server installed and running locally. You can download it from [redis.io](https://redis.io/download).
 
-# test coverage
-$ npm run test:cov
-```
+## Getting Started
 
-## Support
+To get started with this URL Shortener app, follow these steps:
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+1. Clone this repository to your local machine:
 
-## Stay in touch
+2. Navigate to the project directory:
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+3. Install the project dependencies:
+
+4. Create a `.env` file in the project root and configure your environment variables. You can use the provided `.env` example as a template.
+
+5. Start the application in development mode:
+
+6. The app should now be running at `http://localhost:3000`.
+
+## Usage
+
+### Shortening URLs
+
+To shorten a URL, make a POST request to `/shorten` with a JSON body containing the URL you want to shorten. For example:
+
+The response will contain the shortened URL:
+
+### Redirecting to Original URLs
+
+To access the original URL associated with a shortened URL, simply visit `http://localhost:3000/<shortened-url>`. For example:
+
+This will automatically redirect you to the original URL.
+
+## Contributing
+
+Contributions to this URL Shortener app are welcome. If you find issues or have suggestions for improvements, please open an issue or submit a pull request.
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+This URL Shortener app is open-source software licensed under the [MIT License](LICENSE).
